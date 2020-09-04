@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Exmaple</title>
+    <style>
+        .container {
+            height: 544px;
+            width: 100%;
+            border: 2px solid black;
+            /* initilize container as flex */
+            display: flex;
+            /* flex-direction: row(default value is row);
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse; */
+            /* flex properties for flex container */
+            /* flex-wrap: wrap; */
+            /* default value nowrap */
+            /* justify-content: center;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: space-around;
+            align-items: center;
+            align-items: flex-end;
+            align-items: flex-start; */
+            /* align-items: stretch; */
+            /* flex-flow: row-reverse wrap;  (short hand)*/
+        }
+        .item {
+            background-color: tomato;
+            border: 2px solid green;
+            padding: 3px;
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+        }
+        #item-1 {
+            /*  dhigher the order later it shows up in the container */
+            order: 3;
+            /* flex-grow: 2;
+            flex-shrink: 3; */
+            flex-basis: 320px;
+            /* when flex direction is set to row flex basic will control row  */
+             /* when flex direction is set to coloum flex basic will control height  */
+
+        }
+        #item-2 {
+            
+        }
+        #item-3 {
+            /* flex: 2 2 200px; */
+            /* first shrink grow and flex basis together */
+            align-self: center;
+            align-self: flex-end;
+            align-self: flex-start;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+    <!-- div.item#item-$*6 -->
+    <div class="container">
+    <div class="item" id="item-1">First Box</div>
+    <div class="item" id="item-2">Second Box</div>
+    <div class="item" id="item-3">Third Box</div>
+
+    </div>
+
+</body>
+</html>
